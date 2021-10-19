@@ -52,7 +52,7 @@ fun ActiveSubsListItem(
             modifier = Modifier
                 .fillMaxWidth()
                 .padding(end = 10.dp),
-            text = "199 ₽",
+            text = subscription.cost,
             overflow = TextOverflow.Ellipsis,
             textAlign = TextAlign.Right,
             fontSize = 20.sp
