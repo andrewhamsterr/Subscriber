@@ -28,7 +28,7 @@ fun ActiveSubsListItem(
     Row(
         modifier = Modifier
             .fillMaxWidth()
-            .clickable { onClick.invoke() }
+            .clickable() { onClick.invoke() }
             .background(colorResource(id = R.color.colorItemBackground), shape = RoundedCornerShape(12.dp))
             .padding(16.dp),
         verticalAlignment = Alignment.CenterVertically
@@ -46,12 +46,11 @@ fun ActiveSubsListItem(
                 .padding(start = 10.dp, end = 10.dp),
             text = subscription.name,
             textAlign = TextAlign.Left,
-            fontSize = 20.sp
+            fontSize = 20.sp,
         )
         Text(
             modifier = Modifier
-                .fillMaxWidth()
-                .padding(end = 10.dp),
+                .fillMaxWidth(),
             text = subscription.cost,
             overflow = TextOverflow.Ellipsis,
             textAlign = TextAlign.Right,
